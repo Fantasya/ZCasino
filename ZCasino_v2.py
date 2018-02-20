@@ -32,11 +32,12 @@ while argent_joueur < 0:
     argent_joueur = input("Vous êtes l'heureux possesseur de... de combien d'ailleurs ?\n")
     try:
         argent_joueur = int(argent_joueur)
-        if argent_joueur <= 0:
-            print ("On va commencer avec un entier positif d'accord ?")
     except ValueError:
         print("Il faut saisir un nombre, gros malin !")
         argent_joueur = -1;
+        continue
+    if argent_joueur <= 0:
+        print ("On va commencer avec un entier positif d'accord ?")
 
 while argent_joueur > 0 and encore:
 #    num_choisi = input("Sur quel numéro souhaitez misez ?")
