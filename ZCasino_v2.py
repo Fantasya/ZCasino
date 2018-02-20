@@ -49,12 +49,12 @@ while argent_joueur > 0 and encore:
             num_choisi = int(num_choisi)
             mise = int(mise)
             if num_choisi not in range(range_roulette):
-                print ("Il faut choisir un nombre entre 0 et", range_roulette,"!")
+                print (f"Il faut choisir un nombre entre 0 et {range_roulette} !")
                 num_choisi = -1
             if mise <= 0:
                 print("Bravo ! Une mise pleine de bon sens...")
-            elif mise not in range (argent_joueur + 1):
-                print("Vous n'avez pas assez d'argent pour une telle mise ! Vous avez", argent_joueur,"$")
+            elif mise > argent_joueur:
+                print(f"Vous n'avez pas assez d'argent pour une telle mise ! Vous avez {argent_joueur} $")
                 mise = -1
         except ValueError:
             print ("Choisissez des nombres (ex :10 20) ! Et les bons...")
